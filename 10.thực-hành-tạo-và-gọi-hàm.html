@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    function processConfirm(answer) {
+        let result = "";
+        if (answer) {
+            result = "ok.let go";
+        } else {
+            result = "i'm fine";
+        }
+        return result;
+    }
+
+    let confirmAnswer = confirm("are you ready?");
+    let Answer = processConfirm(confirmAnswer);
+    document.write(Answer);
+</script>
