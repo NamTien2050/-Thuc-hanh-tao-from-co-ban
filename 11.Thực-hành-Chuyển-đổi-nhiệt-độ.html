@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form>
+<p>
+    <label for="nhietdovao">nhapvaonhietdo</label>
+    <input type="number" id="nhietdovao" placeholder="nhapvao"
+    oninput="chuyendoinhietdo(this.value)"
+    onchange="chuyendoinhietdo(this.value)">
+</p>
+<p>celsius:<span id="nhietdora"></span></p>
+</form>
+</body>
+</html>
+<script>
+function chuyendoinhietdo(valnum){
+    valnumm=parseInt(valnum);
+    document.getElementById("nhietdora").innerHTML=(valnumm-32)/1.8;
+    console.log((valnumm-32)/1.8);
+}
+</script>
