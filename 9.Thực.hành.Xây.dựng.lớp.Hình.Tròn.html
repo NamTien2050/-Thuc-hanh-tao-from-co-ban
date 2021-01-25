@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let vongtron=function(radius){
+        this.radius=radius;
+        this.getRadius=function (){
+        return radius;
+        }
+        this.getArea=function (){
+            return Math.PI * radius * radius;
+        }
+    };
+    let circle= new vongtron(2);
+    let radi=circle.getRadius();
+    let are=circle.getArea();
+    alert("radius"+radi+"area"+are);
+    console.log("radius"+radi+"area"+are);
+</script>
