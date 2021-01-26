@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="rectangle();">
+<canvas id="bai11" width="820px" height="590px" style="border:5px solid#d3d3d3;"></canvas>
+</body>
+</html>
+<script>
+    function rectangle(){
+        var canvas=document.getElementById("bai11");
+        var ctx=canvas.getContext("2d");
+        ctx.fillRect(40,40,200,100);
+            ctx.fillStyle="#000000";
+            ctx.clearRect(60,60,160,60);
+            ctx.strokeRect(65,65,150,50);
+            let tinhtoan=function (width,length){
+            this.getPerimeter=function (){
+                return (width+length)*2;
+            }
+            this.getAcreage=function () {
+                return width * length;
+            }
+            this.getWidth=function (){
+                return width;
+            }
+            this.getLength=function (){
+                return length;
+            }
+            };
+            let hcn= new tinhtoan(200,100);
+            let dai=hcn.getWidth();
+            let rong=hcn.getLength();
+            let chuvi=hcn.getPerimeter();
+            let dientich=hcn.getAcreage();
+            alert("chieu dai: " +dai+ " chieu rong: " +rong+ " chu vi: " +chuvi+ " dien tich: " +dientich);
+    }
+    rectangle();
+
+</script>
