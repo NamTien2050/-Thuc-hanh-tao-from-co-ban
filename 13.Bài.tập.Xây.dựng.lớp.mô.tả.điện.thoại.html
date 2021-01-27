@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H3>DIEN THOAI</H3>
+<table>
+<tr>
+    <th>Pin           <button type="button" onclick="PIN()"></button><br/>
+        Trang thai dt <button type="button" onclick="BAT()"></button><br/>
+        Trang thai dt <button type="button" onclick="TAT()"></button><br/>
+        Gui tin nhan  <button type="button" onclick="TINHAN()"></button>
+    </th>
+</tr>
+</table>
+</body>
+</html>
+<script>
+       var mobile= function (pin, bat, tat, tinnhan){
+        this.Pin=pin;
+        this.Bat=bat;
+        this.Tat=tat;
+        this.Tinnhan=tinnhan;
+        this.Trangthaipin=function (){
+            if(this.Pin>0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        this.acquy=function(){
+            alert("pin dt:"+this.Pin++);
+        }
+        this.turnOn=function (){
+            alert("dt bat");
+        }
+        this.turnOf=function (){
+            alert("dt tat");
+        }
+        this.writeMessenger=function (){
+            prompt("nhap noi dung chinh");
+        }
+    }
+    var Mobile=new mobile(10,10,10,10);
+       function PIN(){
+           Mobile.acquy();
+       }
+       function BAT(){
+           Mobile.turnOn()
+       }
+       function TAT(){
+           Mobile.turnOf();
+       }
+       function TINHAN(){
+           Mobile.writeMessenger();
+       }
+</script>
