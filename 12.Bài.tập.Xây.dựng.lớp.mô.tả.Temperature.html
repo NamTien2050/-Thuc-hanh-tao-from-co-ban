@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="c" onchange="print(this);">
+<input type="text" id="f">
+<input type="text" id="k">
+</body>
+</html>
+<script>
+function temperature(c){
+ this.Celcius=c;
+ this.convertF=function(){
+     return this.Celcius*1.8+32;
+ }
+    this.convertKenvin=function(){
+     return this.Celcius+273.15;
+    }
+}
+function print(obj){
+   let getCelcius=obj.value;
+   let test1=new temperature(getCelcius);
+   document.getElementById("f").value=test1.convertF();
+    document.getElementById("k").value=test1.convertKenvin();
+}
+</script>
