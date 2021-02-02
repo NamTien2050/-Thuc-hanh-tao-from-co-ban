@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="quanlydulieu"></p>
+</body>
+</html>
+<script>
+    let sum;
+    let x = 1;
+
+    function sinhvien(msv,hoten,toan,ly,hoa){
+        this.msv=msv;
+        this.hoten=hoten;
+        this.toan=toan;
+        this.ly=ly;
+        this.hoa=hoa;
+        this.dtb=(toan+ly+hoa) / 3;
+        this.show=function (){
+            return "Msv:" +this.msv+ " Ho ten: " +this.hoten+ " Diem trung binh: " +this.dtb;
+        }
+    }
+    function QLSV(){
+        this.dssv=[new sinhvien(1,"Thuy",8,8,5), new sinhvien(2,"Linh",7,9,2)]
+        this.add=function (sv){
+            this.dssv.push(sv);
+        }
+        this.del=function (msv){
+            for (let i=0;i<this.dssv.length;i++){
+                if(mssv==this.dssv[i].msv){
+                this.dssv.splice(i,1);
+                }
+            }
+        }
+        this.show=function (){
+            let str="";
+            for (let i=0;i<this.dssv.length;i++){
+                str+=this.dssv[i].show()+"<br>";
+            }
+            return str;
+        }
+        this.edit= function (msv,sv){
+            for(i=0;i<this.dssv.length;i++){
+                if(msv==this.dssv[i].msv){
+                    this.dssv[i]=sv;
+                }
+            }
+        }
+    }
+   let qlsv= new QLSV();
+    document.getElementById("quanlydulieu").innerHTML=qlsv.show()
+    qlsv.add(new sinhvien(3,"Hoa",6,9,8));
+    qlsv.edit(2,new sinhvien(2,"Hue",10,5,7));
+    document.getElementById("quanlydulieu").innerHTML=qlsv.show()
+
+    do {
+        prompt(' xapxep: ');
+    } while (xapxep <= 0) {
+        for (let i = 0; i < n; i++) {
+            x *= i;
+            sum += x;
+        }
+        console.log(sum);
+    }
+</script>
