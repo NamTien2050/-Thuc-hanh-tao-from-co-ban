@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function dathuc(n){
+        this.n=n;
+        this.heso=[];
+        this.nhapdathuc= function (){
+            for(let i=n;i>=0;i--){
+                this.heso[i]=prompt("nhap he so bac:" +i);
+            }
+        }
+        this.inradathuc= function (){
+            let str="";
+            for(let i=n;i>1;i--){
+                str+= this.heso[i]+"x^" + i + "+";
+            }
+            str+= this.heso[0];
+            return str;
+        }
+    }
+    let n=prompt("nhap vao da thuc: ");
+    let dt= new dathuc(n);
+    dt.nhapdathuc();
+    alert(dt.nhapdathuc());
+</script>
+</html>
