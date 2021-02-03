@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+<!--    -->
+
+
+//    Câu 1:----------------------------------------------------------
+//
+//    let check=[5,7,9,4,8,9,6,7.5];
+//    let max=check[0];
+//    let maxcheck=0;
+//    function findMax(){
+//    for(let i=0;i<check.length;i++){
+//        if (check[i]>max){
+//            max=check[i];
+//            maxcheck=i;
+//        }
+//    }
+//    alert("Diem cao nhat: " +max);
+//    }
+//    findMax();
+
+
+
+// câu 2:-------------------------------------------------------------
+//
+// let arr=[7,9,3,2,8,5,17,22,23];
+// let integerX=20;
+// function tryRemoveFromArray(check, checkinteger){
+//     let count=0;
+//     let continued=true;
+//     do {
+//         for (let i=0;i<check.length;i++) {
+//             if (check[i]==checkinteger){
+//                 check.splice(i,1);
+//                 count++;
+//                 break;
+//             }
+//         }
+//         continued=count==0 ? true : false;
+//     }while(!continued)
+//     return check;
+// }
+// alert(tryRemoveFromArray(arr,integerX));
+
+
+
+//Cau 3:-------------------------------------------------------------
+// function calculateFibonacci(n){
+//     if(n==0 || n==1){
+//         return n;
+//     }else{
+//         return calculateFibonacci(n-2)+calculateFibonacci(n-1);
+//     }
+// }
+// function isFibonacci(number){
+//     if(number<0){
+//         return false;
+//     }else{
+//         for(let i=0;i<=number;i++){
+//             if(calculateFibonacci(i)==number){
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+//
+// }
+// alert(isFibonacci(5));
+//
+
+
+// Câu 4:------------------------------------------------------------
+//
+// const canvas=document.createElement("canvas");
+// const ctx=canvas.getContext("2d");
+// canvas.width=window.innerWidth;
+// canvas.height=window.innerHeight;
+// canvas.style.border="1px solid black";
+// document.body.appendChild(canvas);
+// function Circle(x,y,radius,color){
+//     this.x=x;
+//     this.y=y;
+//     this.radius=radius;
+//     this.color=color;
+//     this.blackCircle=function(){
+//         ctx.beginPath();
+//         ctx.arc(this.x ,this.y, this.radius, 0, 2*Math.PI);
+//         ctx.fillStyle=this.color;
+//         ctx.fill();
+//     }
+//
+// }
+// let check=new Circle(1000,200,100,"#000");
+// check.blackCircle();
+</script>
+</html>
